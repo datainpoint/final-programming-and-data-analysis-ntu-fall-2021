@@ -49,13 +49,13 @@ class TestFinal(unittest.TestCase):
         self.assertEqual(taiwan.shape, (1, 6))
     def test_06_calculate_daily_cases(self):
         tw_daily_cases = ex.calculate_daily_cases("Taiwan*")
-        self.assertIsInstance(type(tw_daily_cases), pd.core.frame.DataFrame)
+        self.assertIsInstance(tw_daily_cases, pd.core.frame.DataFrame)
         self.assertEqual(tw_daily_cases.shape, (720, 5))
         jp_daily_cases = ex.calculate_daily_cases("Japan")
-        self.assertIsInstance(type(jp_daily_cases), pd.core.frame.DataFrame)
+        self.assertIsInstance(jp_daily_cases, pd.core.frame.DataFrame)
         self.assertEqual(jp_daily_cases.shape, (720, 5))
         us_daily_cases = ex.calculate_daily_cases("US")
-        self.assertIsInstance(type(us_daily_cases), pd.core.frame.DataFrame)
+        self.assertIsInstance(us_daily_cases, pd.core.frame.DataFrame)
         self.assertEqual(us_daily_cases.shape, (720, 5))
     def test_07_CountryCovidStatus(self):
         tw_covid_status = ex.CountryCovidStatus("Taiwan*")
